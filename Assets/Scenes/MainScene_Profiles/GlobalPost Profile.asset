@@ -1329,7 +1329,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 35
+    value: 15
   intensityX:
     overrideState: 1
     value: 1
@@ -1344,7 +1344,7 @@ MonoBehaviour:
     value: 0
   scale:
     overrideState: 1
-    value: 1.1
+    value: 1.05
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
