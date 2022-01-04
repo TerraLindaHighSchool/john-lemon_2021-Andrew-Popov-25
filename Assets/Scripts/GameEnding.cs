@@ -19,6 +19,8 @@ public class GameEnding : MonoBehaviour
     float m_Timer;
     bool m_HasAudioPlayed;
 
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
@@ -36,7 +38,11 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
-            EndLevel(exitBackgroundImageCanvasGroup, false, exitAudio);
+            GameObject key2 = GameObject.Find("Key2");
+            KeyScript keyScript = key2.GetComponent<KeyScript>();
+
+            if (keyScript.collectedCount == 4)
+                EndLevel(exitBackgroundImageCanvasGroup, false, exitAudio);
         }
         else if (m_IsPlayerCaught)
         {
