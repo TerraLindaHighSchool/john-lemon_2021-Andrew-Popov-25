@@ -21,6 +21,7 @@ public class KeyScript : MonoBehaviour
         if (other.gameObject == player)
         {
             Debug.Log("I like being silly");
+
             collectedCount++;
         }
     }
