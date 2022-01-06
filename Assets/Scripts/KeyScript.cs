@@ -7,7 +7,6 @@ public class KeyScript : MonoBehaviour
     public float amplitude = 0.2f;
     public float frequency = 0.5f;
    
-    public int collectedCount = 0;
     public GameObject player;
 
     Vector3 posOffset = new Vector3();
@@ -20,9 +19,11 @@ public class KeyScript : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            Debug.Log("I like being silly");
-
-            collectedCount++;
+            GameObject gameEndingObject = GameObject.Find("GameEnding");
+            GameEnding gameEnding = gameEndingObject.GetComponent<GameEnding>();
+            gameEnding.collectedCount++;
+            Debug.Log(gameEnding.collectedCount.ToString());
+            gameObject.SetActive(false);
         }
     }
 
